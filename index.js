@@ -83,3 +83,26 @@ console.log(Calculate(radius, area));
 console.log(Calculate(radius, Circumfarence));
 console.log(Calculate(radius, Diameter));
 
+
+// Map function
+// Map function is also a common higher order function 
+// Map function does similar kind thing that is happening inside Calculate function 
+
+
+// const Calculate = function (radius, logic){           
+//     const ans=[];
+    
+//     for(let i=0; i<radius.length; i++){
+//             ans.push(logic(radius[i]));
+//     }
+//     return ans;
+// }
+
+
+// insted using whole calculatre function we can just use raduis.map(logic) 
+
+console.log("Using map function");
+console.log(radius.map(area));
+console.log(radius.map(Circumfarence));
+console.log(radius.map(Diameter));
+
