@@ -44,3 +44,42 @@ const Calculatediameter = function (radius){
 console.log(Calculatediameter(radius));
 
 
+
+// optimised code
+
+
+// area function
+const area = function(radius){
+        return Math.PI*radius * radius;
+}
+
+// Circumfarence function
+const Circumfarence =  function (radius){
+        return 2 * Math.PI*radius;
+}
+
+
+
+// Diameter function
+const Diameter =  function (radius){
+    return 2 *radius;
+}
+
+
+
+// function for cal culating any thing
+const Calculate = function (radius, logic){
+    const ans=[];
+    
+    for(let i=0; i<radius.length; i++){
+            ans.push(logic(radius[i]));
+    }
+    return ans;
+}
+
+// Here we are reusing Calculate function and passing deferrent logics  
+console.log("Optimised code result");
+console.log(Calculate(radius, area));
+console.log(Calculate(radius, Circumfarence));
+console.log(Calculate(radius, Diameter));
+
