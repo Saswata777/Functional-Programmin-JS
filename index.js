@@ -127,3 +127,26 @@ console.log(radius.Calculate(radius, Circumfarence));
 console.log(radius.Calculate(radius, Diameter));
 
 
+// now we are use 'this' key word insted of radius inside calculate function 
+
+
+
+
+Array.prototype.Calculate = function (logic){ //This is pollyfill for map function
+    const ans=[];
+    
+    for(let i=0; i<this.length; i++){
+            ans.push(logic(this[i]));
+    }
+    return ans;
+}
+
+
+console.log("Using Array.prototype along with this key word");
+console.log(radius.Calculate(area)); //This is pollyfill for map function
+console.log(radius.Calculate(Circumfarence)); // same
+console.log(radius.Calculate(Diameter));  // same
+
+
+
+
