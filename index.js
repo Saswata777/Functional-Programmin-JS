@@ -106,3 +106,24 @@ console.log(radius.map(area));
 console.log(radius.map(Circumfarence));
 console.log(radius.map(Diameter));
 
+
+
+
+// Now we are trying to make 'Calculate function' exactly similar to the map function
+
+Array.prototype.Calculate = function (radius, logic){
+    const ans=[];
+    
+    for(let i=0; i<radius.length; i++){
+            ans.push(logic(radius[i]));
+    }
+    return ans;
+}
+
+
+console.log("Using Array.prototype");
+console.log(radius.Calculate(radius, area));
+console.log(radius.Calculate(radius, Circumfarence));
+console.log(radius.Calculate(radius, Diameter));
+
+
